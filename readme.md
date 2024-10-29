@@ -28,6 +28,8 @@ Hey, Netology
 ```
 - Соберите и отправьте созданный образ в свой dockerhub-репозитории c tag 1.0.0 (ТОЛЬКО ЕСЛИ ЕСТЬ ДОСТУП). 
 - Предоставьте ответ в виде ссылки на https://hub.docker.com/<username_repo>/custom-nginx/general .
+### Ответ
+https://hub.docker.com/repository/docker/ranelgilyazov/custom-nginx/general
 
 ## Задача 2
 1. Запустите ваш образ custom-nginx:1.0.0 командой docker run в соответвии с требованиями:
@@ -39,7 +41,8 @@ Hey, Netology
 4. Убедитесь с помощью curl или веб браузера, что индекс-страница доступна.
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
-
+### Ответ
+![Screenshot 2024-10-27 132314](https://github.com/user-attachments/assets/e3fda983-5aea-440d-b8cd-b92b9951b291)
 
 ## Задача 3
 1. Воспользуйтесь docker help или google, чтобы узнать как подключиться к стандартному потоку ввода/вывода/ошибок контейнера "custom-nginx-t2".
@@ -56,6 +59,13 @@ Hey, Netology
 12. Удалите запущенный контейнер "custom-nginx-t2", не останавливая его.(воспользуйтесь --help или google)
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
+### Ответ
+![Screenshot 2024-10-27 135447](https://github.com/user-attachments/assets/3bca5a25-4088-4498-a32e-7ae55bb76c7f)
+Согласно документации комбинация клавиш Ctrl-C останавливает контейнер
+![Screenshot 2024-10-27 140652](https://github.com/user-attachments/assets/b4da3469-cfd0-49c6-a995-da4606646a13)
+![Screenshot 2024-10-27 141102](https://github.com/user-attachments/assets/7f3911b8-7ec1-4373-b928-f19ab13b8a72)
+![Screenshot 2024-10-27 141136](https://github.com/user-attachments/assets/e5a9c935-91b6-4be7-8e36-889b211f0dff)
+Из за того что мы поменяли порт с 80 на 81, nginx обслуживается на 81 порту, и при потыке подключится к 80 порту контейнер выдает не дает нам это сделать и выдает ошибку
 
 ## Задача 4
 
@@ -69,6 +79,11 @@ Hey, Netology
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
+### Ответ 
+
+![Screenshot 2024-10-27 160028](https://github.com/user-attachments/assets/eee0c9ff-c802-4ce4-b4bd-e22e9996a196)
+![Screenshot 2024-10-27 160109](https://github.com/user-attachments/assets/b75a6f2e-16d5-4754-b110-980b279607d8)
+![Screenshot 2024-10-27 160208](https://github.com/user-attachments/assets/8ff7fb46-b884-4010-90f5-9dfdc8e45c04)
 
 ## Задача 5
 
@@ -120,6 +135,13 @@ services:
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
 
 ---
+### Ответ 
+![Screenshot 2024-10-27 161122](https://github.com/user-attachments/assets/eea7246e-d07a-4f87-bb17-f03b4b945f87)
+![Screenshot 2024-10-27 161332](https://github.com/user-attachments/assets/834922bb-1e6d-4d40-86c5-c4449cd378b7)
+![Screenshot 2024-10-27 213903](https://github.com/user-attachments/assets/408ee916-2442-4242-8a40-fe497022f501)
+![Screenshot 2024-10-28 135850](https://github.com/user-attachments/assets/df0f7db4-4ec0-41fb-a6a8-0e05b67252aa)
+
+До пункта 4 сделал. При попытке попсть в portainer не получается попасть по адресу 127.0.0.1:9000, хотя если я запускаю команду curl http://127.0.0.1:9000, все нормально страница отображается, подскажите в чем может быть проблема. Во вкладке вопросы задавал, но ответа пока не получил.
 
 ### Правила приема
 
