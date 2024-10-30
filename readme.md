@@ -138,10 +138,25 @@ services:
 ### Ответ 
 ![Screenshot 2024-10-27 161122](https://github.com/user-attachments/assets/eea7246e-d07a-4f87-bb17-f03b4b945f87)
 ![Screenshot 2024-10-27 161332](https://github.com/user-attachments/assets/834922bb-1e6d-4d40-86c5-c4449cd378b7)
-![Screenshot 2024-10-27 213903](https://github.com/user-attachments/assets/408ee916-2442-4242-8a40-fe497022f501)
-![Screenshot 2024-10-28 135850](https://github.com/user-attachments/assets/df0f7db4-4ec0-41fb-a6a8-0e05b67252aa)
 
-До пункта 4 сделал. При попытке попсть в portainer не получается попасть по адресу 127.0.0.1:9000, хотя если я запускаю команду curl http://127.0.0.1:9000, все нормально страница отображается, подскажите в чем может быть проблема. Во вкладке вопросы задавал, но ответа пока не получил.
+
+#### Дополнения
+
+По адресу 127.0.0.1:9000 в браузере:
+![image](https://github.com/user-attachments/assets/3715c08a-0abe-4823-8de9-182d72db3036)
+По коду  из директории где у меня лежат compose.yaml и docker-compose.yaml, выглядят они так
+![image](https://github.com/user-attachments/assets/37b36c3b-c06e-4dce-8db8-f64dfaa1923a)
+запускаю командой  docker compose up, получаю сообщение что все нормально запущено
+![image](https://github.com/user-attachments/assets/83834d08-9765-4a50-995d-da471b97887f)
+далее ![image](https://github.com/user-attachments/assets/0795f886-caad-415b-8607-2f3c6694f9cc)
+После перезапуска контейнера portainer 
+![image](https://github.com/user-attachments/assets/4fdefd8f-de7b-4082-bc91-ef5d6ec026c6)
+Почему то мне удалось попасть в мой portainer по IP своей виртуальной машины, а не через порт 127.0.0.1:9000, почему так произошло мне к сожалению не понятно
+![image](https://github.com/user-attachments/assets/9b506e46-2d4b-4a7e-87ed-8fb7910832b0)
+
+Удалив файл compose.yaml, остались контенеры которы не кому не принадлежат, слудя из ошибки "Потеренные" контейнеры, благодоря ключу --remove-orphans мы их удалим
+![image](https://github.com/user-attachments/assets/21ef6e0c-0c79-4265-be8a-2f4a74f3d7dc)
+
 
 ### Правила приема
 
